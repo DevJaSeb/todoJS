@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./utils/iconos/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>TodoList</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- TODO: AÑADIR LINKS DE TIPOGRAFIAS-->
+  </head>
+  <body>
+    <header>
+      <h1>TodoList</h1>
+    </header>
+    <main>
+      <section class="form">
+        <!--Label solamente para accesibilidad oculto en la pantalla-->
+        <label for="new-task" class="sr-only">New task</label>
+        <input type="text" class="form-input" placeholder="New Task" />
+        <button class="form-btn">➕ Add</button>
+      </section>
+      <section class="renderTask">
+        <div class="filters">
+          <button class="all">All</button>
+          <button class="active">Active</button>
+          <button class="completed">Completed</button>
+        </div>
+        <ul class="tasksContainer">
+          <li class="task" id="task-1" draggable="true">
+            <div class="drag-handle" aria-label="Arrastrar tarea">
+              <i class="drag-icon">≡</i>
+              <!-- Icono de arrastre -->
+            </div>
+            <input
+              type="checkbox"
+              id="task-checkbox-1"
+              class="task-checkbox"
+              name="cheked"
+              aria-label="Marcar tarea como completada"
+            />
+            <p class="task-text">Ir al gym</p>
+            <div class="task-actions">
+              <button class="task-btn" aria-label="Editar tarea">✏️</button>
+              <button class="task-btn" aria-label="Eliminar tarea">❌</button>
+            </div>
+        </li>
+          <p class="task-emptyState">No hay tareas. ¡Añade una!</p>
+        </ul>
+      </section>
+    </main>
+    <footer>
+        <p class="task-pending">0 tareas pendientes</p>
+      <p>SebasDev © 2025 | Todos los derechos reservados</p>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
